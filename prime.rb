@@ -1,7 +1,9 @@
-def prime?(number)
-  if num < 0 or num == 0 or num == 1
-    return false
-  else
-    (2..number-1).none? {|n|number % n == 0}
+def is_prime_number(item)
+  return false if item == 1
+  (2..(item - 1)).each do |number|
+    if item % number == 0
+      return false
+    end
   end
+  return true
 end
