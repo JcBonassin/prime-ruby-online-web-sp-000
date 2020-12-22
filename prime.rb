@@ -1,9 +1,12 @@
-def is_prime_number(item)
-  return false if item == 1
-  (2..(item - 1)).each do |number|
-    if item % number == 0
-      return false
+def prime?(value)
+  if value <= 1 || value == 0 || value == 1
+    return false
+  elsif
+    (2..value - 1).each do |i|
+      if value % i == 0
+        return false
+      end
     end
   end
-  return true
+  true  # <= need explanation
 end
