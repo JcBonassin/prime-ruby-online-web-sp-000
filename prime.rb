@@ -1,7 +1,15 @@
-prime_array = []
-
-(1...100).each do |num|
-  if (1..num).select { |d| num % d == 0 } == [1, num]
-    prime_array.push(num)
+def is_prime?(number)
+       return false if number <2
+        (2..Integer.sqrt(number)).each do |divisor|
+              return false if number % divisor == 0
   end
+     return number
+end
+
+def read_array(array)
+     primes = []
+  array.each do |num|
+       primes << num if is_prime?(num)
+  end
+ return primes
 end
